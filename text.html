@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        canvas {
+            border: 1px solid #cccccc;
+
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas" class="canvas"></canvas>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        if (canvas.getContext) {
+            console.log('Supported');
+            let ctx = canvas.getContext('2d');
+            
+            ctx.font = '80px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillStyle = '#44bcb6';
+            ctx.fillText('Canvas SON', 20, 70);
+        } else {
+            console.warn('Not Supported');
+        }
+    </script>
+</body>
+
+</html>
